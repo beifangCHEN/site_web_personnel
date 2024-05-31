@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site de Beifang CHEN</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function toggleVisibility(id) {
+            var element = document.getElementById(id);
+            var arrow = document.getElementById(id + '-arrow');
+            if (element.style.display === "none") {
+                element.style.display = "block";
+                arrow.innerHTML = "&#9650;"; // up arrow
+            } else {
+                element.style.display = "none";
+                arrow.innerHTML = "&#9660;"; // down arrow
+            }
+        }
+    </script>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <img src="image/votre-photo.jpg" alt="Photo de Beifang CHEN" class="profile-photo">
+            <div class="header-text">
+                <h1>Beifang CHEN</h1>
+                <p>Étudiante en BUT2 Technologie de l'Information à la recherche d'un stage (en Informatique ou Science des Données)<br>à partir de juin 2024 (8-12 semaines)</p>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <aside class="sidebar">
+            <section class="contact-info">
+                <h2 onclick="toggleVisibility('contact')">Contact <span id="contact-arrow" class="arrow">&#9660;</span></h2>
+                <div id="contact" style="display:none;">
+                    <ul>
+                        <li>• <strong>Email: </strong><a href="mailto:beifang.chen@edu.univ-paris13.fr">beifang.chen@edu.univ-paris13.fr</a></li>
+                        <li>• <strong>Téléphone: </strong>07.83.13.39.24</li>
+                        <li>• <strong>Adresse: </strong>Avenue Marcelle, 93000 Bobigny</li>
+                        <li>• <strong>LinkedIn: </strong><a href="https://linkedin.com/in/beifang-chen" target="_blank">linkedin.com/in/beifang-chen</a></li>
+                    </ul>
+                </div>
+            </section>
+            <section class="skills">
+                <h2 onclick="toggleVisibility('skills')">Compétences et Connaissances <span id="skills-arrow" class="arrow">&#9660;</span></h2>
+                <div id="skills" style="display:none;">
+                    <ul>
+                        <li>• Systèmes d'information décisionnels, Management des systèmes d'information, Tests logiciels, Architecture des réseaux, Cryptographie et sécurité</li>
+                        <li>• Analyse, Algèbre, Probabilités, Statistiques, Test d'hypothèses</li>
+                        <li>• Droit des contrats et du numérique, Anglais professionnel, Communication professionnelle</li>
+                        <li>• C, Java, Python, HTML, CSS, PHP, JavaScript, CAML, Bash, Haskell</li>
+                        <li>• Pandas, Matplotlib, SQL</li>
+                        <li>• Visual Studio, Jupyter Notebook, R Studio, Android Studio, Power BI, GitHub</li>
+                    </ul>
+                </div>
+            </section>
+            <section class="languages">
+                <h2 onclick="toggleVisibility('languages')">Langues <span id="languages-arrow" class="arrow">&#9660;</span></h2>
+                <div id="languages" style="display:none;">
+                    <ul>
+                        <li>• Chinois (bilingue)</li>
+                        <li>• Français (lu, écrit, parlé)</li>
+                        <li>• Anglais (technique)</li>
+                    </ul>
+                </div>
+            </section>
+            <section class="interests">
+                <h2 onclick="toggleVisibility('interests')">Centres d'intérêt <span id="interests-arrow" class="arrow">&#9660;</span></h2>
+                <div id="interests" style="display:none;">
+                    <ul>
+                        <li>• <strong>Voyages: </strong>Chine, France, Portugal, Allemagne, Pays-Bas, Belgique, République tchèque, Slovaquie, Hongrie, Autriche, Luxembourg</li>
+                        <li>• <strong>Sports: </strong>Tir à l'arc, Pilates-Yoga, Golf, Plongée</li>
+                    </ul>
+                </div>
+            </section>
+        </aside>
+        <main class="main-content">
+            <article class="education">
+                <h2 onclick="toggleVisibility('education')">Formation <span id="education-arrow" class="arrow">&#9660;</span></h2>
+                <div id="education" style="display:none;">
+                    <ul>
+                       <li>
+    <strong><a href="https://iutv.univ-paris13.fr/but-passerelle-technologie-information/" target="_blank">BUT2 TI (Technologie de l'Information)</a></strong>, 
+    <span class="lieu">de oct. 2023 à juil. 2024    <br>Université Sorbonne Paris Nord, Villetaneuse</span>
+    <a href="https://iutv.univ-paris13.fr" target="_blank"><img src="image/IUTV.JPG" alt="IUTV" class="IUTV-image"></a>
+    <br>Actuellement en BUT PASSERELLE (Informatique + Science des Données)
+</li>
+
+                        <li>
+    <strong><a href="https://galilee.univ-paris13.fr/licence/licence-mathematiques/" target="_blank">Licence Mathématiques</a></strong>, 
+    <span class="lieu">de sept. 2019 à juil. 2023    <br>Université Sorbonne Paris Nord, Villetaneuse</span>
+    <a href="https://www.univ-spn.fr" target="_blank"><img src="image/USPN.JPG" alt="USPN" class="USPN-image"></a>
+    <br>Obtention du DEUG Mathématiques et Application en juillet 2022
+</li>
+
+                        <li>
+    <strong><a href="https://math-info.u-paris.fr/licence-dinformatique/" target="_blank">Licence Informatique</a></strong>, 
+    <span class="lieu">de déc. 2014 à juil. 2019    <br>Université Paris Descartes, Paris</span>
+    <a href="https://u-paris.fr" target="_blank"><img src="image/UPD.JPG" alt="UPD" class="UPD-image"></a>
+    <br>Obtention du DEUG informatique en juillet 2019
+</li>
+
+<li><strong>Classe préparatoire MPSI</strong>, <span class="lieu">de sept. 2014 à déc. 2014<br>Lycée Voltaire, Paris</span>
+<a href="https://pia.ac-paris.fr/serail/jcms/s2_101109/fr/accueil" target="_blank"><img src="image/voltaire.JPG" alt="voltaire" class="voltaire-image"></a></li>
+<li><strong>Baccalauréat Scientifique (spécialité mathématiques)</strong>,<span class="lieu"> juil. 2014<br>Lycée Baggio, Lille</span>
+<a href="https://cesarbaggio.fr/WP/" target="_blank"><img src="image/baggio.JPG" alt="baggio" class="baggio-image"></a></li>
+<li><strong>Apprentissage de la langue Française</strong>, <span class="lieu">de sept. 2010 à juin 2011<br>Lycée Gaston Berger, Lille</span>
+<a href="https://www.gastonberger.fr/" target="_blank"><img src="image/GB.JPG" alt="GB" class="GB-image"></a>
+<br>Obtention du diplôme du DELF A2 en juin 2011</li>
+
+                    </ul>
+                </div>
+            </article>
+            <article class="projects">
+                <h2 onclick="toggleVisibility('projects')">Projets universitaires <span id="projects-arrow" class="arrow">&#9660;</span></h2>
+                <div id="projects" style="display:none;">
+                    <ul>
+                        <li><strong>SAE</strong>, <span class="lieu">de janv. 2024 à mars 2024<br>situation d'apprentissage et d'évaluation, IUT Villetaneuse</span>
+<br><strong>Analyse collaborative des données Parcoursup</strong>
+<br>• Travail en binôme
+<br>• Objectif: faciliter les décisions d'admission
+<br>Acquis compétences en analyse de données, prise de décision stratégique
+</li>
+                        <li><strong>Séminaire</strong>, <span class="lieu">de sept. 2022 à nov. 2022<br>Projet d'algèbre, Université Sorbonne Paris Nord</span>
+<br><strong>Exposé de 75 minutes en binôme : </strong>
+<br>• Développement des notions de base
+<br>• Résolution des exercices et présentation des solutions
+<br>Acquis compétences en présentation, en résolution de problème
+</li>
+                        <li><strong>Agenda en ligne</strong>, <span class="lieu">de janv. 2019 à mai 2019<br>Projet de programmation, Université Paris Descartes</span>
+<br><strong>Développement d'une application similaire à Google Agenda.</strong>
+<br>• Travail en groupe de 4 personnes
+<br>• Gestion des inscriptions et sécurité
+<br>• Création, annulation, modification des rendez-vous
+<br>Acquis: compétences en programmation et en gestion de projet
+</li>
+                    </ul>
+                </div>
+            </article>
+            <article class="internship">
+                <h2 onclick="toggleVisibility('internship')">Stage <span id="internship-arrow" class="arrow">&#9660;</span></h2>
+                <div id="internship" style="display:none;">
+                    <ul>
+                        <li><strong>Assistante d'éducation en mathématiques</strong>, <span class="lieu">de mars 2023 à juin 2023
+<br>Lycée Polyvalent de Cachan, Cachan</span>
+<br>• Observation des cours au lycée
+<br>• Réponse aux questions des lycéens
+<br>• Animation d'une séance pédagogique
+<br>Acquis: sens de l'écoute, pédagogie, créativité, adaptation
+</li>
+                    </ul>
+                </div>
+            </article>
+            <article class="experience">
+                <h2 onclick="toggleVisibility('experience')">Expérience professionnelle <span id="experience-arrow" class="arrow">&#9660;</span></h2>
+                <div id="experience" style="display:none;">
+                    <ul>
+                        <li><strong>Serveuse (weekend)</strong>, <span class="lieu">de sept. 2013 à janv. 2014
+<br>Le Phoenix, Roncq</span>
+<br>• Préparation de salle
+<br>• Accueil client
+<br>• Prise des commandes
+<br>• Encaissement
+<br>Acquis: travail en équipe, communication, rigueur, rapidité
+</li>
+                    </ul>
+                </div>
+            </article>
+        </main>
+    </div>
+    <footer>
+        <p>&copy; 2024 Beifang CHEN. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
