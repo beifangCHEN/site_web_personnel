@@ -14,8 +14,6 @@ header {
     padding: 2em 0;
 }
 
-
-
 .header-content {
     display: flex;
     align-items: center;
@@ -102,7 +100,7 @@ footer {
     margin-left: 10px;
 }
 
-.IUTV-image, .voltaire-image {
+.IUTV-image, .voltaire-image, .PS-image {
     width: 4em;
     height: auto; 
     vertical-align: middle; 
@@ -116,6 +114,12 @@ footer {
 
 .UPD-image, .GB-image {
     width: 1em;
+    height: auto; 
+    vertical-align: middle; 
+}
+
+.SAE-image {
+    width: 30em;
     height: auto; 
     vertical-align: middle; 
 }
