@@ -7,7 +7,7 @@ body {
 }
 
 header {
-    background-image: url('../image/SD.jpg');
+    background-image: url('../image/home/SD.jpg');
     background-size: cover; 
     background-position: center;
     color: white;
@@ -100,26 +100,31 @@ footer {
     margin-left: 10px;
 }
 
-.IUTV-image, .voltaire-image, .PS-image {
+.image4 {
     width: 4em;
     height: auto; 
     vertical-align: middle; 
 }
 
-.USPN-image, .baggio-image {
+.image3 {
     width: 3em;
     height: auto; 
     vertical-align: middle; 
 }
+.image2 {
+    width: 2em;
+    height: auto; 
+    vertical-align: middle; 
+}
 
-.UPD-image, .GB-image {
+.image1 {
     width: 1em;
     height: auto; 
     vertical-align: middle; 
 }
 
-.SAE-image {
-    width: 30em;
+.projet-image {
+    max-width: 100%;
     height: auto;  
 }
 
