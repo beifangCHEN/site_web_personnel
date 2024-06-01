@@ -6,15 +6,16 @@
     <title>Site de Beifang CHEN</title>
     <link rel="stylesheet" href="css/styles.css">
     <script>
+        // Fonction pour basculer la visibilité d'un élément par son identifiant
         function toggleVisibility(id) {
             var element = document.getElementById(id);
             var arrow = document.getElementById(id + '-arrow');
             if (element.style.display === "none") {
                 element.style.display = "block";
-                arrow.innerHTML = "&#9650;"; // up arrow
+                arrow.innerHTML = "&#9650;"; // flèche vers le haut
             } else {
                 element.style.display = "none";
-                arrow.innerHTML = "&#9660;"; // down arrow
+                arrow.innerHTML = "&#9660;"; // flèche vers le bas
             }
         }
     </script>
@@ -25,10 +26,15 @@
             <img src="image/home/mon-photo.jpeg" alt="Photo de Beifang CHEN" class="profile-photo">
             <div class="header-text">
                 <h1>Beifang CHEN</h1>
-                <p>Étudiante en BUT2 Technologie de l'Information à la recherche d'un stage (en Informatique ou Science des Données)<br>à partir de juin 2024 (8-12 semaines)</p>
+                <p>Étudiante en BUT2 Technologie de l'Information</p>
+                <h2>• Recherche de Stage</h2>
+                <p>À la recherche d'un stage (en Informatique ou Science des Données)<br>à partir de juin 2024 (8-12 semaines)</p>
+                <h2>• Recherche d'Alternance</h2>
+                <p>Cherche une alternance pour la 3e année en Science des Données<br>à partir de septembre 2024, rythme 3 jours de formation / 2 jours en entreprise,<br>en partenariat avec le CFA Supalia</p>
             </div>
         </div>
     </header>
+
     <div class="container">
         <aside class="sidebar">
             <section class="contact-info">
@@ -42,6 +48,7 @@
                     </ul>
                 </div>
             </section>
+
             <section class="skills">
                 <h2 onclick="toggleVisibility('skills')">Compétences et Connaissances <span id="skills-arrow" class="arrow">&#9660;</span></h2>
                 <div id="skills" style="display:none;">
@@ -51,15 +58,16 @@
                         <li>• Droit des contrats et du numérique, Anglais professionnel, Communication professionnelle</li>
                         <li>• C, Java, Python, HTML, CSS, PHP, JavaScript, CAML, Bash, Haskell</li>
                         <li>• Pandas, Matplotlib, SQL</li>
-                        <li>• Visual Studio<img src="image/Competences/VS.jpg" alt="VS" class="image1"></a>
-, Jupyter Notebook<img src="image/Competences/jupyter.jpg" alt="jupyter" class="image1"></a>
-, R Studio<img src="image/Competences/R.jpg" alt="R" class="image1"></a>
-, Android Studio<img src="image/Competences/AS.png" alt="AS" class="image1"></a>
-, Power BI<img src="image/Competences/BI.jpg" alt="BI" class="image3"></a>
-, GitHub<img src="image/Competences/GitHub.jpg" alt="Git" class="image1"></a></li>
+                        <li>• Visual Studio <img src="image/Competences/VS.jpg" alt="VS" class="image1">
+                            , Jupyter Notebook <img src="image/Competences/jupyter.jpg" alt="jupyter" class="image1">
+                            , R Studio <img src="image/Competences/R.jpg" alt="R" class="image1">
+                            , Android Studio <img src="image/Competences/AS.png" alt="AS" class="image1">
+                            , Power BI <img src="image/Competences/BI.jpg" alt="BI" class="image3">
+                            , GitHub <img src="image/Competences/GitHub.jpg" alt="Git" class="image1"></li>
                     </ul>
                 </div>
             </section>
+
             <section class="languages">
                 <h2 onclick="toggleVisibility('languages')">Langues <span id="languages-arrow" class="arrow">&#9660;</span></h2>
                 <div id="languages" style="display:none;">
@@ -70,6 +78,7 @@
                     </ul>
                 </div>
             </section>
+
             <section class="interests">
                 <h2 onclick="toggleVisibility('interests')">Centres d'intérêt <span id="interests-arrow" class="arrow">&#9660;</span></h2>
                 <div id="interests" style="display:none;">
@@ -80,102 +89,105 @@
                 </div>
             </section>
         </aside>
+
         <main class="main-content">
             <article class="education">
                 <h2 onclick="toggleVisibility('education')">Formation <span id="education-arrow" class="arrow">&#9660;</span></h2>
                 <div id="education" style="display:none;">
                     <ul>
-                       <li>
-    <strong><a href="https://iutv.univ-paris13.fr/but-passerelle-technologie-information/" target="_blank">• BUT2 TI (Technologie de l'Information)</a></strong>, 
-    <span class="lieu">de oct. 2023 à juil. 2024    <br>Université Sorbonne Paris Nord, Villetaneuse</span>
-    <a href="https://iutv.univ-paris13.fr" target="_blank"><img src="image/formation/IUTV.png" alt="IUTV" class="image4"></a>
-    <br>Actuellement en BUT PASSERELLE (Informatique + Science des Données)
-</li>
-
                         <li>
-    <strong><a href="https://galilee.univ-paris13.fr/licence/licence-mathematiques/" target="_blank">• Licence Mathématiques</a></strong>, 
-    <span class="lieu">de sept. 2019 à juil. 2023    <br>Université Sorbonne Paris Nord, Villetaneuse</span>
-    <a href="https://www.univ-spn.fr" target="_blank"><img src="image/formation/USPN.jpg" alt="USPN" class="image3"></a>
-    <br>Obtention du DEUG Mathématiques et Application en juillet 2022
-</li>
-
+                            <strong><a href="https://iutv.univ-paris13.fr/but-passerelle-technologie-information/" target="_blank">• BUT2 TI (Technologie de l'Information)</a></strong>, 
+                            <span class="lieu">de oct. 2023 à juil. 2024<br>Université Sorbonne Paris Nord, Villetaneuse</span>
+                            <a href="https://iutv.univ-paris13.fr" target="_blank"><img src="image/formation/IUTV.png" alt="IUTV" class="image4"></a>
+                            <br>Actuellement en BUT PASSERELLE (Informatique + Science des Données)
+                        </li>
                         <li>
-    <strong><a href="https://math-info.u-paris.fr/licence-dinformatique/" target="_blank">• Licence Informatique</a></strong>, 
-    <span class="lieu">de déc. 2014 à juil. 2019    <br>Université Paris Descartes, Paris</span>
-    <a href="https://u-paris.fr" target="_blank"><img src="image/formation/UPD.jpg" alt="UPD" class="image1"></a>
-    <br>Obtention du DEUG informatique en juillet 2019
-</li>
-
-<li><strong>• Classe préparatoire MPSI</strong>, <span class="lieu">de sept. 2014 à déc. 2014<br>Lycée Voltaire, Paris</span>
-<a href="https://pia.ac-paris.fr/serail/jcms/s2_101109/fr/accueil" target="_blank"><img src="image/formation/voltaire.jpg" alt="voltaire" class="image4"></a></li>
-<li><strong>• Baccalauréat Scientifique (spécialité mathématiques)</strong>,<span class="lieu"> juil. 2014<br>Lycée Baggio, Lille</span>
-<a href="https://cesarbaggio.fr/WP/" target="_blank"><img src="image/formation/baggio.jpg" alt="baggio" class="image3"></a></li>
-<li><strong>• Apprentissage de la langue Française</strong>, <span class="lieu">de sept. 2010 à juin 2011<br>Lycée Gaston Berger, Lille</span>
-<a href="https://www.gastonberger.fr/" target="_blank"><img src="image/formation/GB.jpg" alt="GB" class="image1"></a>
-<br>Obtention du diplôme du DELF A2 en juin 2011</li>
-
+                            <strong><a href="https://galilee.univ-paris13.fr/licence/licence-mathematiques/" target="_blank">• Licence Mathématiques</a></strong>, 
+                            <span class="lieu">de sept. 2019 à juil. 2023<br>Université Sorbonne Paris Nord, Villetaneuse</span>
+                            <a href="https://www.univ-spn.fr" target="_blank"><img src="image/formation/USPN.jpg" alt="USPN" class="image3"></a>
+                            <br>Obtention du DEUG Mathématiques et Application en juillet 2022
+                        </li>
+                        <li>
+                            <strong><a href="https://math-info.u-paris.fr/licence-dinformatique/" target="_blank">• Licence Informatique</a></strong>, 
+                            <span class="lieu">de déc. 2014 à juil. 2019<br>Université Paris Descartes, Paris</span>
+                            <a href="https://u-paris.fr" target="_blank"><img src="image/formation/UPD.jpg" alt="UPD" class="image1"></a>
+                            <br>Obtention du DEUG informatique en juillet 2019
+                        </li>
+                        <li><strong>• Classe préparatoire MPSI</strong>, <span class="lieu">de sept. 2014 à déc. 2014<br>Lycée Voltaire, Paris</span>
+                            <a href="https://pia.ac-paris.fr/serail/jcms/s2_101109/fr/accueil" target="_blank"><img src="image/formation/voltaire.jpg" alt="voltaire" class="image4"></a></li>
+                        <li><strong>• Baccalauréat Scientifique (spécialité mathématiques)</strong>,<span class="lieu"> juil. 2014<br>Lycée Baggio, Lille</span>
+                            <a href="https://cesarbaggio.fr/WP/" target="_blank"><img src="image/formation/baggio.jpg" alt="baggio" class="image3"></a></li>
+                        <li><strong>• Apprentissage de la langue Française</strong>, <span class="lieu">de sept. 2010 à juin 2011<br>Lycée Gaston Berger, Lille</span>
+                            <a href="https://www.gastonberger.fr/" target="_blank"><img src="image/formation/GB.jpg" alt="GB" class="image1"></a>
+                            <br>Obtention du diplôme du DELF A2 en juin 2011</li>
                     </ul>
                 </div>
             </article>
+            <!-- Projets Universitaires -->
             <article class="projects">
                 <h2 onclick="toggleVisibility('projects')">Projets universitaires <span id="projects-arrow" class="arrow">&#9660;</span></h2>
                 <div id="projects" style="display:none;">
                     <ul>
-                        <li><strong>SAE</strong> (situation d'apprentissage et d'évaluation), <span class="lieu">de janv. 2024 à mars 2024<br>IUT Villetaneuse</span>
-    <a href="https://iutv.univ-paris13.fr" target="_blank"><img src="image/formation/IUTV.png" alt="IUTV" class="image4"></a>
-<br><strong>Analyse collaborative des données Parcoursup    <a href="https://www.parcoursup.gouv.fr/" target="_blank"><img src="image/projets/PS.jpg" alt="PS" class="image4"></a></strong>
-<br>• Travail en binôme
-<br>• Objectif: faciliter les décisions d'admission
-<br><strong>Acquis : </strong>compétences en analyse de données, prise de décision stratégique
-<br><img src="image/projets/SAE.jpg" alt="SAE" class="projet-image">
-</li>
-                        <li><strong>Séminaire</strong> (Projet d'algèbre), <span class="lieu">de sept. 2022 à nov. 2022<br>Université Sorbonne Paris Nord</span>
-    <a href="https://www.univ-spn.fr" target="_blank"><img src="image/formation/USPN.jpg" alt="USPN" class="image3"></a>
-<br><strong>Étude de la structure et classification des algèbres de Lie simples</strong>
-<br>• Exposé de 75 minutes en binôme
-<br>• Développement des notions de base
-<br>• Résolution des exercices et présentation des solutions
-<br><strong>Acquis : </strong>compétences en présentation, en résolution de problème
-<br><img src="image/projets/Seminaire.jpg" alt="Seminaire" class="projet-image">
-</li>
-                        <li><strong>Agenda en ligne</strong> (Projet de programmation), <span class="lieu">de janv. 2019 à mai 2019<br>Université Paris Descartes</span>
-    <a href="https://u-paris.fr" target="_blank"><img src="image/formation/UPD.jpg" alt="UPD" class="image1"></a>
-<br><strong>Développement d'une application similaire à Google Agenda</strong>
-<br>• Travail en groupe de 4 personnes
-<br>• Gestion des inscriptions et sécurité
-<br>• Création, annulation, modification des rendez-vous
-<br><strong>Acquis : </strong>compétences en programmation et en gestion de projet
-<br><img src="image/projets/agendas.jpg" alt="agendas" class="projet-image">
-</li>
+                        <!-- SAE -->
+                        <li><strong>SAE</strong> (Situation d'Apprentissage et d'Évaluation), <span class="lieu">de janvier 2024 à mars 2024<br>IUT Villetaneuse</span>
+                            <a href="https://iutv.univ-paris13.fr" target="_blank"><img src="image/formation/IUTV.png" alt="IUTV" class="image4"></a>
+                            <br><strong>Analyse collaborative des données Parcoursup <a href="https://www.parcoursup.gouv.fr/" target="_blank"><img src="image/projets/PS.jpg" alt="PS" class="image4"></a></strong>
+                            <br>• Travail en binôme
+                            <br>• Objectif : faciliter les décisions d'admission
+                            <br><strong>Acquis :</strong> compétences en analyse de données, prise de décision stratégique
+                            <br><img src="image/projets/SAE.jpg" alt="SAE" class="projet-image">
+                        </li>
+                        <!-- Séminaire -->
+                        <li><strong>Séminaire</strong> (Projet d'algèbre), <span class="lieu">de septembre 2022 à novembre 2022<br>Université Sorbonne Paris Nord</span>
+                            <a href="https://www.univ-spn.fr" target="_blank"><img src="image/formation/USPN.jpg" alt="USPN" class="image3"></a>
+                            <br><strong>Étude de la structure et classification des algèbres de Lie simples</strong>
+                            <br>• Exposé de 75 minutes en binôme
+                            <br>• Développement des notions de base
+                            <br>• Résolution des exercices et présentation des solutions
+                            <br><strong>Acquis :</strong> compétences en présentation, en résolution de problème
+                            <br><img src="image/projets/Seminaire.jpg" alt="Seminaire" class="projet-image">
+                        </li>
+                        <!-- Agenda en ligne -->
+                        <li><strong>Agenda en ligne</strong> (Projet de programmation), <span class="lieu">de janvier 2019 à mai 2019<br>Université Paris Descartes</span>
+                            <a href="https://u-paris.fr" target="_blank"><img src="image/formation/UPD.jpg" alt="UPD" class="image1"></a>
+                            <br><strong>Développement d'une application similaire à Google Agenda</strong>
+                            <br>• Travail en groupe de 4 personnes
+                            <br>• Gestion des inscriptions et sécurité
+                            <br>• Création, annulation, modification des rendez-vous
+                            <br><strong>Acquis :</strong> compétences en programmation et en gestion de projet
+                            <br><img src="image/projets/agendas.jpg" alt="agendas" class="projet-image">
+                        </li>
                     </ul>
                 </div>
             </article>
+            <!-- Stage -->
             <article class="internship">
                 <h2 onclick="toggleVisibility('internship')">Stage <span id="internship-arrow" class="arrow">&#9660;</span></h2>
                 <div id="internship" style="display:none;">
                     <ul>
-                        <li><strong>Assistante d'éducation en mathématiques</strong>, <span class="lieu">de mars 2023 à juin 2023
-<br>Lycée Polyvalent de Cachan, Cachan</span><a href="https://www.lyceedecachan.fr" target="_blank"><img src="image/pro/LDC.jpg" alt="LDC" class="image2"></a>
-<br>• Observation des cours au lycée
-<br>• Réponse aux questions des lycéens
-<br>• Animation d'une séance pédagogique
-<br><strong>Acquis : </strong>sens de l'écoute, pédagogie, créativité, adaptation
-</li>
+                        <!-- Assistante d'éducation en mathématiques -->
+                        <li><strong>Assistante d'éducation en mathématiques</strong>, <span class="lieu">de mars 2023 à juin 2023<br>Lycée Polyvalent de Cachan, Cachan</span><a href="https://www.lyceedecachan.fr" target="_blank"><img src="image/pro/LDC.jpg" alt="LDC" class="image2"></a>
+                            <br>• Observation des cours au lycée
+                            <br>• Réponse aux questions des lycéens
+                            <br>• Animation d'une séance pédagogique
+                            <br><strong>Acquis :</strong> sens de l'écoute, pédagogie, créativité, adaptation
+                        </li>
                     </ul>
                 </div>
             </article>
+            <!-- Expérience professionnelle -->
             <article class="experience">
                 <h2 onclick="toggleVisibility('experience')">Expérience professionnelle <span id="experience-arrow" class="arrow">&#9660;</span></h2>
                 <div id="experience" style="display:none;">
                     <ul>
-                        <li><strong>Serveuse (weekend)</strong>, <span class="lieu">de sept. 2013 à janv. 2014
-<br>Le Phoenix, Roncq</span><img src="image/pro/LP.jpg" alt="LP" class="image2">
-<br>• Préparation de salle
-<br>• Accueil client
-<br>• Prise des commandes
-<br>• Encaissement
-<br><strong>Acquis : </strong>travail en équipe, communication, rigueur, rapidité
-</li>
+                        <!-- Serveuse (weekend) -->
+                        <li><strong>Serveuse (weekend)</strong>, <span class="lieu">de septembre 2013 à janvier 2014<br>Le Phoenix, Roncq</span><img src="image/pro/LP.jpg" alt="LP" class="image2">
+                            <br>• Préparation de salle
+                            <br>• Accueil client
+                            <br>• Prise des commandes
+                            <br>• Encaissement
+                            <br><strong>Acquis :</strong> travail en équipe, communication, rigueur, rapidité
+                        </li>
                     </ul>
                 </div>
             </article>
@@ -186,3 +198,4 @@
     </footer>
 </body>
 </html>
+
