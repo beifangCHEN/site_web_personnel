@@ -1,0 +1,128 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-image: url('../image/SD.jpg');
+    background-size: cover; 
+    background-position: center;
+    color: white;
+    padding: 2em 0;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1em;
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 2em;
+    object-fit: cover;
+}
+
+.header-text h1 {
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1em;
+}
+
+.sidebar {
+    flex: 1;
+    max-width: 300px;
+    margin-right: 1em;
+}
+
+.main-content {
+    flex: 2;
+    max-width: 800px;
+}
+
+section, article {
+    background-color: white;
+    margin-bottom: 2em;
+    padding: 1em;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section h2, article h2 {
+    color: #022673;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section ul, article ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+section ul li, article ul li {
+    margin: 0.5em 0;
+}
+
+a {
+    color: #022673;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    padding: 1em 0;
+    background-color: #333;
+    color: white;
+}
+
+.arrow {
+    font-size: 1em;
+    margin-left: 10px;
+}
+
+.IUTV-image, .voltaire-image, .PS-image {
+    width: 4em;
+    height: auto; 
+    vertical-align: middle; 
+}
+
+.USPN-image, .baggio-image {
+    width: 3em;
+    height: auto; 
+    vertical-align: middle; 
+}
+
+.UPD-image, .GB-image {
+    width: 1em;
+    height: auto; 
+    vertical-align: middle; 
+}
+
+.SAE-image {
+    width: 30em;
+    height: auto;  
+}
+
+.lieu {
+    color: grey;
+}
