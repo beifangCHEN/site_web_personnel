@@ -1,133 +1,153 @@
+/* Styles de base pour le corps de la page */
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif; /* Police de caractère */
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #f4f4f4; /* Couleur de fond */
+    color: #333; /* Couleur du texte */
 }
 
+/* Styles pour l'en-tête */
 header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../image/home/SD.jpg');
-    background-size: cover; 
-    background-position: center;
-    color: white;
-    padding: 2em 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../image/home/SD.jpg');
+    background-size: cover; /* Couverture de l'image de fond */
+    background-position: center; /* Position de l'image de fond */
+    color: white; /* Couleur du texte */
+    padding: 2em 0; /* Espacement interne */
 }
 
+/* Contenu de l'en-tête */
 .header-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1em;
+    display: flex; /* Affichage en flexbox */
+    align-items: center; /* Alignement vertical */
+    justify-content: center; /* Centrage horizontal */
+    max-width: 1200px; /* Largeur maximale */
+    margin: 0 auto; /* Centrage horizontal */
+    padding: 0 1em; /* Espacement interne horizontal */
 }
 
+/* Photo de profil */
 .profile-photo {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    margin-right: 2em;
-    object-fit: cover;
+    width: 200px; /* Largeur */
+    height: 200px; /* Hauteur */
+    border-radius: 50%; /* Bords arrondis */
+    margin-right: 2em; /* Espacement à droite */
+    object-fit: cover; /* Ajustement de l'image */
 }
 
+/* En-tête du texte */
 .header-text h1 {
-    margin: 0;
+    margin: 0; /* Suppression des marges */
 }
 
+/* Styles pour le conteneur principal */
 .container {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 1em;
+    display: flex; /* Affichage en flexbox */
+    flex-wrap: wrap; /* Retours à la ligne */
+    max-width: 1200px; /* Largeur maximale */
+    margin: 0 auto; /* Centrage horizontal */
+    padding: 1em; /* Espacement interne */
 }
 
+/* Barre latérale */
 .sidebar {
-    flex: 1;
-    max-width: 300px;
-    margin-right: 1em;
+    flex: 1; /* Flexibilité */
+    max-width: 300px; /* Largeur maximale */
+    margin-right: 1em; /* Espacement à droite */
 }
 
+/* Contenu principal */
 .main-content {
-    flex: 2;
-    max-width: 800px;
+    flex: 2; /* Flexibilité */
+    max-width: 800px; /* Largeur maximale */
 }
 
+/* Styles pour les sections et les articles */
 section, article {
-    background-color: white;
-    margin-bottom: 2em;
-    padding: 1em;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: white; /* Couleur de fond */
+    margin-bottom: 2em; /* Espacement en bas */
+    padding: 1em; /* Espacement interne */
+    border-radius: 5px; /* Bords arrondis */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre portée */
 }
 
+/* En-têtes des sections et des articles */
 section h2, article h2 {
-    color: #022673;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    color: #022673; /* Couleur du texte */
+    cursor: pointer; /* Curseur pointeur */
+    display: flex; /* Affichage en flexbox */
+    align-items: center; /* Alignement vertical */
+    justify-content: space-between; /* Espacement entre les éléments */
 }
 
+/* Listes dans les sections et les articles */
 section ul, article ul {
-    list-style-type: none;
-    padding: 0;
+    list-style-type: none; /* Suppression des puces */
+    padding: 0; /* Suppression des espacements internes */
 }
 
+/* Élément de liste */
 section ul li, article ul li {
-    margin: 0.5em 0;
+    margin: 0.5em 0; /* Espacement vertical */
 }
 
+/* Styles pour les liens */
 a {
-    color: #022673;
-    text-decoration: none;
+    color: #022673; /* Couleur du lien */
+    text-decoration: none; /* Suppression du soulignement */
 }
 
+/* Soulignement au survol */
 a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* Soulignement au survol */
 }
 
+/* Styles pour le pied de page */
 footer {
-    text-align: center;
-    padding: 1em 0;
-    background-color: #333;
-    color: white;
+    text-align: center; /* Alignement centré */
+    padding: 1em 0; /* Espacement interne vertical */
+    background-color: #333; /* Couleur de fond */
+    color: white; /* Couleur du texte */
 }
 
+/* Styles pour les flèches */
 .arrow {
-    font-size: 1em;
-    margin-left: 10px;
+    font-size: 1em; /* Taille de la police */
+    margin-left: 10px; /* Espacement à gauche */
 }
 
+/* Tailles des images */
 .image4 {
-    width: 4em;
-    height: auto; 
-    vertical-align: middle; 
+    width: 4em; /* Largeur */
+    height: auto; /* Hauteur automatique */
+    vertical-align: middle; /* Alignement vertical */
 }
 
 .image3 {
-    width: 3em;
-    height: auto; 
-    vertical-align: middle; 
+    width: 3em; /* Largeur */
+    height: auto; /* Hauteur automatique */
+    vertical-align: middle; /* Alignement vertical */
 }
+
 .image2 {
-    width: 2em;
-    height: auto; 
-    vertical-align: middle; 
+    width: 2em; /* Largeur */
+    height: auto; /* Hauteur automatique */
+    vertical-align: middle; /* Alignement vertical */
 }
 
 .image1 {
-    width: 1em;
-    height: auto; 
-    vertical-align: middle; 
+    width: 1em; /* Largeur */
+    height: auto; /* Hauteur automatique */
+    vertical-align: middle; /* Alignement vertical */
 }
 
+/* Images des projets */
 .projet-image {
-    max-width: 100%;
-    height: auto;  
+    max-width: 100%; /* Largeur maximale */
+    height: auto; /* Hauteur automatique */
 }
 
+/* Style pour les lieux */
 .lieu {
-    color: grey;
+    color: grey; /* Couleur du texte */
 }
