@@ -6,20 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Site de Beifang CHEN</title>
     <link rel="stylesheet" href="css/styles.css">
-    <script>
-        // Fonction pour basculer la visibilité d'un élément par son identifiant
-        function toggleVisibility(id) {
-            var element = document.getElementById(id);
-            var arrow = document.getElementById(id + '-arrow');
-            if (element.style.display === "none") {
-                element.style.display = "block";
-                arrow.innerHTML = "&#9650;"; // flèche vers le haut
-            } else {
-                element.style.display = "none";
-                arrow.innerHTML = "&#9660;"; // flèche vers le bas
-            }
-        }
-    </script>
 </head>
 <body>
     <!-- En-tête de la page -->
@@ -44,7 +30,8 @@
         <aside class="sidebar">
             <!-- Section des informations personnelles -->
             <section class="contact-info">
-                <h2 onclick="toggleVisibility('contact')">Informations personnelles <span id="contact-arrow" class="arrow">&#9660;</span></h2>
+<h2 onclick="toggleVisibility('contact', 'contact-arrow', 'click-count')">Informations personnelles <span id="contact-arrow" class="arrow">&#9660;</span><span id="click-count">0</span></h2>
+
                 <div id="contact" style="display:none;">
                     <ul>
                         <li>• <strong>LinkedIn: </strong><a href="https://linkedin.com/in/beifang-chen" target="_blank">linkedin.com/in/beifang-chen</a></li>
@@ -55,6 +42,7 @@
                     </ul>
                 </div>
             </section>
+
 
             <!-- Section des compétences et connaissances -->
             <section class="skills">
@@ -219,5 +207,7 @@
     <footer>
         <p>&copy; 2024 Beifang CHEN. Tous droits réservés.</p>
     </footer>
+        <!-- JavaScript -->
+    <script src="js/script.js"></script>
 </body>
 </html>
