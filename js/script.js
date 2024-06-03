@@ -1,65 +1,49 @@
-// Basculer la visibilité et mettre à jour le compteur de clics
-function toggleVisibility(id, arrowId, countId) {
-    const element = document.getElementById(id);
-    const arrow = document.getElementById(arrowId);
-    const clickCountElement = document.getElementById(countId);
+        // Initialisation des états de visibilité
+        const sectionStates = {
+            contact: false,
+            skills: false,
+            languages: false,
+            interests: false,
+            education: false,
+            projects: false,
+            internships: false,
+            experience: false
+        };
 
-    // Obtenir l'ID utilisateur à partir du stockage local ou en générer un nouveau
-    let userId = localStorage.getItem('userId');
-    if (!userId) {
-        userId = generateUserId();
-        localStorage.setItem('userId', userId);
-    }
+        function toggleVisibility(sectionId, arrowId, counterId) {
+            const section = document.getElementById(sectionId);
+            const arrow = document.getElementById(arrowId);
+            const counter = document.getElementById(counterId);
+            
+            sectionStates[sectionId] = !sectionStates[sectionId];
 
-    // Obtenir le nombre de clics pour l'utilisateur actuel
-    let clickCount = parseInt(localStorage.getItem('clickCount_' + id + '_' + userId)) || 0;
+            if (sectionStates[sectionId]) {
+                section.style.display = "block";
+                arrow.innerHTML = "&#9650;";
+            } else {
+                section.style.display = "none";
+                arrow.innerHTML = "&#9660;";
+            }
 
-    // Basculer la visibilité de l'élément
-    if (element.style.display === 'none') {
-        element.style.display = 'block';
-        arrow.innerHTML = '&#9650;'; // Flèche vers le haut
-        clickCount++;
-    } else {
-        element.style.display = 'none';
-        arrow.innerHTML = '&#9660;'; // Flèche vers le bas
-    }
+            // Mise à jour du compteur si l'état a changé
+            if (!counter.clicked) {
+                counter.innerHTML = parseInt(counter.innerHTML) + 1;
+                counter.clicked = true;
+            }
+        }
 
-    // Mettre à jour le compteur de clics
-    clickCountElement.innerText = clickCount;
-    localStorage.setItem('clickCount_' + id + '_' + userId, clickCount);
-}
+        function resetCounters() {
+            // Réinitialiser les compteurs
+            const counters = document.querySelectorAll('span[id$="-click-count"]');
+            counters.forEach(counter => {
+                counter.innerHTML = "0";
+                counter.clicked = false;
+            });
 
-// Générer un ID utilisateur aléatoire
-function generateUserId() {
-    return Math.random().toString(36).substring(2);
-}
-
-// Afficher les compteurs de clics lors du chargement de la page
-function displayClickCounts() {
-    const userId = localStorage.getItem('userId');
-    if (userId) {
-        const sections = ['contact', 'skills', 'languages', 'interests', 'education', 'projects', 'internship', 'experience'];
-        sections.forEach(section => {
-            const clickCount = parseInt(localStorage.getItem('clickCount_' + section + '_' + userId)) || 0;
-            document.getElementById(section + '-click-count').innerText = clickCount;
-        });
-    }
-}
-
-// Réinitialiser tous les compteurs de clics
-function resetClickCounts() {
-    const userId = localStorage.getItem('userId');
-    if (userId) {
-        const sections = ['contact', 'skills', 'languages', 'interests', 'education', 'projects', 'internship', 'experience'];
-        sections.forEach(section => {
-            localStorage.setItem('clickCount_' + section + '_' + userId, 0);
-            document.getElementById(section + '-click-count').innerText = '0';
-        });
-    }
-}
-
-// Appeler displayClickCounts lors du chargement de la page
-window.onload = displayClickCounts;
-
-// Ajouter un écouteur d'événements au bouton de réinitialisation
-document.getElementById('reset-button').addEventListener('click', resetClickCounts);
+            // Réinitialiser les états de visibilité
+            for (let sectionId in sectionStates) {
+                sectionStates[sectionId] = false;
+                document.getElementById(sectionId).style.display = "none";
+                document.getElementById(sectionId + '-arrow').innerHTML = "&#9660;";
+            }
+        }

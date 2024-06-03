@@ -30,11 +30,11 @@
         <aside class="sidebar">
 
             <!-- Section des informations personnelles -->
-<section class="contact-info">
-    <h2 onclick="toggleVisibility('contact', 'contact-arrow', 'contact-click-count')">
-        Informations personnelles <span id="contact-arrow" class="arrow">&#9660;</span><span id="contact-click-count">0</span>
-    </h2>
-    <div id="contact" style="display:none;">
+            <section class="contact-info">
+                <h2 onclick="toggleVisibility('contact', 'contact-arrow', 'contact-click-count')">
+                    Informations personnelles <span id="contact-arrow" class="arrow">&#9660;</span><span id="contact-click-count">0</span>
+                </h2>
+                <div id="contact" style="display:none;">
                     <ul>
                         <li>• <strong>LinkedIn: </strong><a href="https://linkedin.com/in/beifang-chen" target="_blank">linkedin.com/in/beifang-chen</a></li>
                         <li>• <strong>Email: </strong><a href="mailto:beifang.chen@edu.univ-paris13.fr">beifang.chen@edu.univ-paris13.fr</a></li>
@@ -43,13 +43,13 @@
                         <li>• <strong>Permis de conduire: </strong>Permis B</li>
                     </ul>
                 </div>
-<!-- Ajouter un bouton de réinitialisation -->
-<button id="reset-button">Réinitialiser les compteurs de clics</button>
             </section>
 
             <!-- Section des compétences et connaissances -->
             <section class="skills">
-                <h2 onclick="toggleVisibility('skills')">Compétences et Connaissances <span id="skills-arrow" class="arrow">&#9660;</span></h2>
+                <h2 onclick="toggleVisibility('skills', 'skills-arrow', 'skills-click-count')">
+                    Compétences et Connaissances <span id="skills-arrow" class="arrow">&#9660;</span><span id="skills-click-count">0</span>
+                </h2>
                 <div id="skills" style="display:none;">
                     <ul>
                         <li>• Systèmes d'information décisionnels, Management des systèmes d'information, Tests logiciels, Architecture des réseaux, Cryptographie et sécurité</li>
@@ -78,7 +78,9 @@
 
             <!-- Section des langues -->
             <section class="languages">
-                <h2 onclick="toggleVisibility('languages')">Langues <span id="languages-arrow" class="arrow">&#9660;</span></h2>
+                <h2 onclick="toggleVisibility('languages', 'languages-arrow', 'languages-click-count')">
+                    Langues <span id="languages-arrow" class="arrow">&#9660;</span><span id="languages-click-count">0</span>
+                </h2>
                 <div id="languages" style="display:none;">
                     <ul>
                         <li>• Chinois (bilingue)</li>
@@ -90,7 +92,9 @@
 
             <!-- Section des centres d'intérêt -->
             <section class="interests">
-                <h2 onclick="toggleVisibility('interests')">Centres d'intérêt <span id="interests-arrow" class="arrow">&#9660;</span></h2>
+                <h2 onclick="toggleVisibility('interests', 'interests-arrow', 'interests-click-count')">
+                    Centres d'intérêt <span id="interests-arrow" class="arrow">&#9660;</span><span id="interests-click-count">0</span>
+                </h2>
                 <div id="interests" style="display:none;">
                     <ul>
                         <li>• <strong>Voyages: </strong>Chine, France, Portugal, Allemagne, Pays-Bas, Belgique, République tchèque, Slovaquie, Hongrie, Autriche, Luxembourg</li>
@@ -106,9 +110,11 @@
         <main class="main-content">
             <!-- Section de formation -->
             <article class="education">
-                <h2 onclick="toggleVisibility('education')">Formation <span id="education-arrow" class="arrow">&#9660;</span></h2>
+                <h2 onclick="toggleVisibility('education', 'education-arrow', 'education-click-count')">
+                    Formation <span id="education-arrow" class="arrow">&#9660;</span><span id="education-click-count">0</span>
+                </h2>
                 <div id="education" style="display:none;">
-                    <ul>
+                   <ul>
                         <li>
                             <strong><a href="https://iutv.univ-paris13.fr/but-passerelle-technologie-information/" target="_blank">• BUT2 TI (Technologie de l'Information)</a></strong>, 
                             <span class="lieu">de oct. 2023 à juil. 2024<br>Université Sorbonne Paris Nord, Villetaneuse</span>
@@ -137,9 +143,12 @@
                     </ul>
                 </div>
             </article>
-            <!-- Projets Universitaires -->
+
+            <!-- Section de projet -->
             <article class="projects">
-                <h2 onclick="toggleVisibility('projects')">Projets universitaires <span id="projects-arrow" class="arrow">&#9660;</span></h2>
+                <h2 onclick="toggleVisibility('projects', 'projects-arrow', 'projects-click-count')">
+                    Projets <span id="projects-arrow" class="arrow">&#9660;</span><span id="projects-click-count">0</span>
+                </h2>
                 <div id="projects" style="display:none;">
                     <ul>
                         <!-- SAE -->
@@ -174,10 +183,13 @@
                     </ul>
                 </div>
             </article>
-            <!-- Stage -->
-            <article class="internship">
-                <h2 onclick="toggleVisibility('internship')">Stage <span id="internship-arrow" class="arrow">&#9660;</span></h2>
-                <div id="internship" style="display:none;">
+
+            <!-- Section de stage -->
+            <article class="internships">
+                <h2 onclick="toggleVisibility('internships', 'internships-arrow', 'internships-click-count')">
+                    Stages <span id="internships-arrow" class="arrow">&#9660;</span><span id="internships-click-count">0</span>
+                </h2>
+                <div id="internships" style="display:none;">
                     <ul>
                         <!-- Assistante d'éducation en mathématiques -->
                         <li><strong>Assistante d'éducation en mathématiques</strong>, <span class="lieu">de mars 2023 à juin 2023<br>Lycée Polyvalent de Cachan, Cachan </span><a href="https://www.lyceedecachan.fr" target="_blank"><img src="image/pro/LDC.jpg" alt="LDC" class="image2"></a>
@@ -189,9 +201,12 @@
                     </ul>
                 </div>
             </article>
-            <!-- Expérience professionnelle -->
+
+            <!-- Section d'expérience -->
             <article class="experience">
-                <h2 onclick="toggleVisibility('experience')">Expérience professionnelle <span id="experience-arrow" class="arrow">&#9660;</span></h2>
+                <h2 onclick="toggleVisibility('experience', 'experience-arrow', 'experience-click-count')">
+                    Expérience <span id="experience-arrow" class="arrow">&#9660;</span><span id="experience-click-count">0</span>
+                </h2>
                 <div id="experience" style="display:none;">
                     <ul>
                         <!-- Serveuse (weekend) -->
@@ -206,7 +221,10 @@
                 </div>
             </article>
         </main>
+        <button onclick="resetCounters()">Réinitialiser</button>
     </div>
+
+    <!-- Pied de page -->
     <footer>
         <p>&copy; 2024 Beifang CHEN. Tous droits réservés.</p>
     </footer>
