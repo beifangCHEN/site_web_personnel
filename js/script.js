@@ -19,7 +19,6 @@ function toggleVisibility(id, arrowId, countId) {
         element.style.display = 'block';
         arrow.innerHTML = '&#9650;'; // Flèche vers le haut
         clickCount++;
-        saveClickTimestamp(id, userId);
     } else {
         element.style.display = 'none';
         arrow.innerHTML = '&#9660;'; // Flèche vers le bas
@@ -35,33 +34,26 @@ function generateUserId() {
     return Math.random().toString(36).substring(2);
 }
 
-// Enregistrer le timestamp de clic
-function saveClickTimestamp(id, userId) {
-    const timestamp = new Date().toISOString();
-    localStorage.setItem('clickTimestamp_' + id + '_' + userId, timestamp);
-}
-
-// Obtenir tous les comptes de clics pour l'affichage
+// Afficher les compteurs de clics lors du chargement de la page
 function displayClickCounts() {
     const userId = localStorage.getItem('userId');
     if (userId) {
         const sections = ['contact', 'skills', 'languages', 'interests', 'education', 'projects', 'internship', 'experience'];
         sections.forEach(section => {
             const clickCount = parseInt(localStorage.getItem('clickCount_' + section + '_' + userId)) || 0;
-            document.getElementById(section + '-count').innerText = clickCount;
+            document.getElementById(section + '-click-count').innerText = clickCount;
         });
     }
 }
 
-// Réinitialiser tous les comptes de clics
+// Réinitialiser tous les compteurs de clics
 function resetClickCounts() {
     const userId = localStorage.getItem('userId');
     if (userId) {
         const sections = ['contact', 'skills', 'languages', 'interests', 'education', 'projects', 'internship', 'experience'];
         sections.forEach(section => {
-            localStorage.removeItem('clickCount_' + section + '_' + userId);
-            document.getElementById(section + '-count').innerText = '0';
-            document.getElementById(section + '-click-count').innerText = '0'; // Réinitialiser le compteur affiché
+            localStorage.setItem('clickCount_' + section + '_' + userId, 0);
+            document.getElementById(section + '-click-count').innerText = '0';
         });
     }
 }
