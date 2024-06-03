@@ -28,11 +28,13 @@
     <div class="container">
         <!-- Barre latérale -->
         <aside class="sidebar">
-            <!-- Section des informations personnelles -->
-            <section class="contact-info">
-<h2 onclick="toggleVisibility('contact', 'contact-arrow', 'click-count')">Informations personnelles <span id="contact-arrow" class="arrow">&#9660;</span><span id="click-count">0</span></h2>
 
-                <div id="contact" style="display:none;">
+            <!-- Section des informations personnelles -->
+<section class="contact-info">
+    <h2 onclick="toggleVisibility('contact', 'contact-arrow', 'contact-click-count')">
+        Informations personnelles <span id="contact-arrow" class="arrow">&#9660;</span><span id="contact-click-count">0</span>
+    </h2>
+    <div id="contact" style="display:none;">
                     <ul>
                         <li>• <strong>LinkedIn: </strong><a href="https://linkedin.com/in/beifang-chen" target="_blank">linkedin.com/in/beifang-chen</a></li>
                         <li>• <strong>Email: </strong><a href="mailto:beifang.chen@edu.univ-paris13.fr">beifang.chen@edu.univ-paris13.fr</a></li>
@@ -42,7 +44,6 @@
                     </ul>
                 </div>
             </section>
-
 
             <!-- Section des compétences et connaissances -->
             <section class="skills">
@@ -97,6 +98,8 @@
             </section>
             <!-- Lien vers le site personnel -->
             <a href="https://chenbeifang.weebly.com" target="_blank"><img src="image/home/savoir.png" alt="CBF" class="image5"></a>
+<!-- Ajouter un bouton de réinitialisation -->
+<button id="reset-button">Réinitialiser les compteurs de clics</button>
         </aside>
 
         <!-- Contenu principal -->

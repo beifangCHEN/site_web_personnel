@@ -1,59 +1,73 @@
+// Basculer la visibilité et mettre à jour le compteur de clics
 function toggleVisibility(id, arrowId, countId) {
-    var element = document.getElementById(id);
-    var arrow = document.getElementById(arrowId);
-    var clickCountElement = document.getElementById(countId);
-    
-    // Obtenir l'identifiant utilisateur à partir des cookies
-    var userId = getCookie("userId");
-    
-    // Si aucun identifiant utilisateur n'est disponible, en générer un nouveau et le stocker dans les cookies
+    const element = document.getElementById(id);
+    const arrow = document.getElementById(arrowId);
+    const clickCountElement = document.getElementById(countId);
+
+    // Obtenir l'ID utilisateur à partir du stockage local ou en générer un nouveau
+    let userId = localStorage.getItem('userId');
     if (!userId) {
         userId = generateUserId();
-        setCookie("userId", userId, 365); // Définir la durée de validité du cookie à un an
+        localStorage.setItem('userId', userId);
     }
-    
-    // Obtenir le nombre de clics de l'utilisateur à partir des cookies
-    var clickCount = parseInt(getCookie("clickCount_" + userId)) || 0;
-    
-    // Si l'élément est caché, le montrer ; sinon, le cacher
-    if (element.style.display === "none") {
-        element.style.display = "block";
-        arrow.innerHTML = "&#9650;"; // flèche vers le haut
+
+    // Obtenir le nombre de clics pour l'utilisateur actuel
+    let clickCount = parseInt(localStorage.getItem('clickCount_' + id + '_' + userId)) || 0;
+
+    // Basculer la visibilité de l'élément
+    if (element.style.display === 'none') {
+        element.style.display = 'block';
+        arrow.innerHTML = '&#9650;'; // Flèche vers le haut
         clickCount++;
+        saveClickTimestamp(id, userId);
     } else {
-        element.style.display = "none";
-        arrow.innerHTML = "&#9660;"; // flèche vers le bas
+        element.style.display = 'none';
+        arrow.innerHTML = '&#9660;'; // Flèche vers le bas
     }
-    
-    // Mettre à jour le nombre de clics et le stocker dans les cookies
+
+    // Mettre à jour le compteur de clics
     clickCountElement.innerText = clickCount;
-    setCookie("clickCount_" + userId, clickCount, 365); // Définir la durée de validité du cookie à un an
+    localStorage.setItem('clickCount_' + id + '_' + userId, clickCount);
 }
-    
-// Générer un identifiant utilisateur aléatoire
+
+// Générer un ID utilisateur aléatoire
 function generateUserId() {
     return Math.random().toString(36).substring(2);
 }
-    
-// Définir un cookie
-function setCookie(name, value, days) {
-    var expires = "";
-    if (days) {
-        var date = new Date();
-        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-        expires = "; expires=" + date.toUTCString();
-    }
-    document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+
+// Enregistrer le timestamp de clic
+function saveClickTimestamp(id, userId) {
+    const timestamp = new Date().toISOString();
+    localStorage.setItem('clickTimestamp_' + id + '_' + userId, timestamp);
 }
-    
-// Obtenir un cookie
-function getCookie(name) {
-    var nameEQ = name + "=";
-    var ca = document.cookie.split(';');
-    for(var i = 0; i < ca.length; i++) {
-        var c = ca[i];
-        while (c.charAt(0) == ' ') c = c.substring(1, c.length);
-        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+
+// Obtenir tous les comptes de clics pour l'affichage
+function displayClickCounts() {
+    const userId = localStorage.getItem('userId');
+    if (userId) {
+        const sections = ['contact', 'skills', 'languages', 'interests', 'education', 'projects', 'internship', 'experience'];
+        sections.forEach(section => {
+            const clickCount = parseInt(localStorage.getItem('clickCount_' + section + '_' + userId)) || 0;
+            document.getElementById(section + '-count').innerText = clickCount;
+        });
     }
-    return null;
 }
+
+// Réinitialiser tous les comptes de clics
+function resetClickCounts() {
+    const userId = localStorage.getItem('userId');
+    if (userId) {
+        const sections = ['contact', 'skills', 'languages', 'interests', 'education', 'projects', 'internship', 'experience'];
+        sections.forEach(section => {
+            localStorage.removeItem('clickCount_' + section + '_' + userId);
+            document.getElementById(section + '-count').innerText = '0';
+            document.getElementById(section + '-click-count').innerText = '0'; // Réinitialiser le compteur affiché
+        });
+    }
+}
+
+// Appeler displayClickCounts lors du chargement de la page
+window.onload = displayClickCounts;
+
+// Ajouter un écouteur d'événements au bouton de réinitialisation
+document.getElementById('reset-button').addEventListener('click', resetClickCounts);
