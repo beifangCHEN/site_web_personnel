@@ -1,153 +1,153 @@
-/* Styles de base pour le corps de la page */
+/* Styles de base pour le corps de la page 页面主体的基本样式*/
 body {
-    font-family: Arial, sans-serif; /* Police de caractère */
+    font-family: Arial, sans-serif; /* Police de caractère 字体*/
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4; /* Couleur de fond */
-    color: #333; /* Couleur du texte */
+    background-color: #f4f4f4; /* Couleur de fond 背景颜色*/
+    color: #333; /* Couleur du texte 文字颜色*/
 }
 
-/* Styles pour l'en-tête */
+/* Styles pour l'en-tête 页眉样式*/
 header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../image/home/SD.jpg');
-    background-size: cover; /* Couverture de l'image de fond */
-    background-position: center; /* Position de l'image de fond */
-    color: white; /* Couleur du texte */
-    padding: 2em 0; /* Espacement interne */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../image/home/SD.jpg');/* 背景图像和渐变 */
+    background-size: cover; /* Couverture de l'image de fond 背景图像覆盖*/
+    background-position: center; /* Position de l'image de fond 背景图像居中*/
+    color: white; /* Couleur du texte 文字颜色*/
+    padding: 2em 0; /* Espacement interne 内边距*/
 }
 
-/* Contenu de l'en-tête */
+/* Contenu de l'en-tête 页眉内容样式*/
 .header-content {
-    display: flex; /* Affichage en flexbox */
-    align-items: center; /* Alignement vertical */
-    justify-content: center; /* Centrage horizontal */
-    max-width: 1200px; /* Largeur maximale */
-    margin: 0 auto; /* Centrage horizontal */
-    padding: 0 1em; /* Espacement interne horizontal */
+    display: flex; /* Affichage en flexbox (Flexbox 布局)*/
+    align-items: center; /* Alignement vertical 垂直居中*/
+    justify-content: center; /* Centrage horizontal 水平居中*/
+    max-width: 1200px; /* Largeur maximale 最大宽度*/
+    margin: 0 auto; /* Centrage horizontal 水平居中*/
+    padding: 0 1em; /* Espacement interne horizontal 水平内边距*/
 }
 
-/* Photo de profil */
+/* Photo de profil 个人头像样式*/
 .profile-photo {
-    width: 200px; /* Largeur */
-    height: 200px; /* Hauteur */
-    border-radius: 50%; /* Bords arrondis */
-    margin-right: 2em; /* Espacement à droite */
-    object-fit: cover; /* Ajustement de l'image */
+    width: 200px; /* Largeur 宽度*/
+    height: 200px; /* Hauteur 高度*/
+    border-radius: 50%; /* Bords arrondis 圆形边框*/
+    margin-right: 2em; /* Espacement à droite 右边距*/
+    object-fit: cover; /* Ajustement de l'image图片适应方式 */
 }
 
-/* En-tête du texte */
+/* En-tête du texte 页眉文本样式*/
 .header-text h1 {
-    margin: 0; /* Suppression des marges */
+    margin: 0; /* Suppression des marges  无边距*/
 }
 
-/* Styles pour le conteneur principal */
+/* Styles pour le conteneur principal 主容器样式*/
 .container {
-    display: flex; /* Affichage en flexbox */
-    flex-wrap: wrap; /* Retours à la ligne */
-    max-width: 1200px; /* Largeur maximale */
-    margin: 0 auto; /* Centrage horizontal */
-    padding: 1em; /* Espacement interne */
+    display: flex; /* Affichage en flexbox (Flexbox 布局)*/
+    flex-wrap: wrap; /* Retours à la ligne 自动换行*/
+    max-width: 1200px; /* Largeur maximale 最大宽度*/
+    margin: 0 auto; /* Centrage horizontal 水平居中*/
+    padding: 1em; /* Espacement interne 内边距*/
 }
 
-/* Barre latérale */
+/* Barre latérale 侧边栏样式*/
 .sidebar {
-    flex: 1; /* Flexibilité */
-    max-width: 300px; /* Largeur maximale */
-    margin-right: 1em; /* Espacement à droite */
+    flex: 1; /* Flexibilité (Flexbox 弹性伸缩)*/
+    max-width: 300px; /* Largeur maximale 最大宽度*/
+    margin-right: 1em; /* Espacement à droite 右边距*/
 }
 
-/* Contenu principal */
+/* Contenu principal 主要内容样式*/
 .main-content {
-    flex: 2; /* Flexibilité */
-    max-width: 800px; /* Largeur maximale */
+    flex: 2; /* Flexibilité (Flexbox 弹性伸缩)*/
+    max-width: 800px; /* Largeur maximale 最大宽度*/
 }
 
-/* Styles pour les sections et les articles */
+/* Styles pour les sections et les articles 区块和文章的样式*/
 section, article {
-    background-color: white; /* Couleur de fond */
-    margin-bottom: 2em; /* Espacement en bas */
-    padding: 1em; /* Espacement interne */
-    border-radius: 5px; /* Bords arrondis */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre portée */
+    background-color: white; /* Couleur de fond 背景颜色*/
+    margin-bottom: 2em; /* Espacement en bas 下边距*/
+    padding: 1em; /* Espacement interne 内边距*/
+    border-radius: 5px; /* Bords arrondis 圆角*/
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre portée 阴影*/
 }
 
-/* En-têtes des sections et des articles */
+/* En-têtes des sections et des articles 区块和文章的标题样式*/
 section h2, article h2 {
-    color: #022673; /* Couleur du texte */
-    cursor: pointer; /* Curseur pointeur */
-    display: flex; /* Affichage en flexbox */
-    align-items: center; /* Alignement vertical */
-    justify-content: space-between; /* Espacement entre les éléments */
+    color: #022673; /* Couleur du texte 文字颜色*/
+    cursor: pointer; /* Curseur pointeur 鼠标指针*/
+    display: flex; /* Affichage en flexbox (Flexbox 布局)*/
+    align-items: center; /* Alignement vertical 垂直居中*/
+    justify-content: space-between; /* Espacement entre les éléments 元素间距*/
 }
 
-/* Listes dans les sections et les articles */
+/* Listes dans les sections et les articles 区块和文章内的列表样式*/
 section ul, article ul {
-    list-style-type: none; /* Suppression des puces */
-    padding: 0; /* Suppression des espacements internes */
+    list-style-type: none; /* Suppression des puces 无列表标记*/
+    padding: 0; /* Suppression des espacements internes 无内边距*/
 }
 
-/* Élément de liste */
+/* Élément de liste 列表项样式 */
 section ul li, article ul li {
-    margin: 0.5em 0; /* Espacement vertical */
+    margin: 0.5em 0; /* Espacement vertical 垂直边距*/
 }
 
-/* Styles pour les liens */
+/* Styles pour les liens 链接样式*/
 a {
-    color: #022673; /* Couleur du lien */
-    text-decoration: none; /* Suppression du soulignement */
+    color: #022673; /* Couleur du lien 链接颜色*/
+    text-decoration: none; /* Suppression du soulignement  无下划线*/
 }
 
-/* Soulignement au survol */
+/* Soulignement au survol 鼠标悬停时的链接样式 */
 a:hover {
-    text-decoration: underline; /* Soulignement au survol */
+    text-decoration: underline; /* Soulignement au survol 下划线*/
 }
 
-/* Styles pour le pied de page */
+/* Styles pour le pied de page 页脚样式*/
 footer {
-    text-align: center; /* Alignement centré */
-    padding: 1em 0; /* Espacement interne vertical */
-    background-color: #333; /* Couleur de fond */
-    color: white; /* Couleur du texte */
+    text-align: center; /* Alignement centré 文字居中*/
+    padding: 1em 0; /* Espacement interne vertical 垂直内边距*/
+    background-color: #333; /* Couleur de fond 背景颜色*/
+    color: white; /* Couleur du texte 文字颜色*/
 }
 
-/* Styles pour les flèches */
+/* Styles pour les flèches 箭头的样式 */
 .arrow {
-    font-size: 1em; /* Taille de la police */
-    margin-left: 10px; /* Espacement à gauche */
+    font-size: 1em; /* Taille de la police 字体大小*/
+    margin-left: 10px; /* Espacement à gauche 左边距*/
 }
 
-/* Tailles des images */
+/* Tailles des images 图片大小样式*/
 .image4 {
-    width: 4em; /* Largeur */
-    height: auto; /* Hauteur automatique */
-    vertical-align: middle; /* Alignement vertical */
+    width: 4em; /* Largeur 宽度*/
+    height: auto; /* Hauteur automatique 自动高度*/
+    vertical-align: middle; /* Alignement vertical 垂直对齐*/
 }
 
 .image3 {
-    width: 3em; /* Largeur */
-    height: auto; /* Hauteur automatique */
-    vertical-align: middle; /* Alignement vertical */
+    width: 3em; /* Largeur 宽度 */
+    height: auto; /* Hauteur automatique 自动高度*/
+    vertical-align: middle; /* Alignement vertical 垂直对齐*/
 }
 
 .image2 {
-    width: 2em; /* Largeur */
-    height: auto; /* Hauteur automatique */
-    vertical-align: middle; /* Alignement vertical */
+    width: 2em; /* Largeur 宽度 */
+    height: auto; /* Hauteur automatique 自动高度*/
+    vertical-align: middle; /* Alignement vertical 垂直对齐*/
 }
 
 .image1 {
-    width: 1em; /* Largeur */
-    height: auto; /* Hauteur automatique */
-    vertical-align: middle; /* Alignement vertical */
+    width: 1em; /* Largeur 宽度 */
+    height: auto; /* Hauteur automatique 自动高度*/
+    vertical-align: middle; /* Alignement vertical 垂直对齐*/
 }
 
-/* Images des projets */
+/* Images des projets 项目图片样式*/
 .projet-image {
-    max-width: 100%; /* Largeur maximale */
-    height: auto; /* Hauteur automatique */
+    max-width: 100%; /* Largeur maximale 最大宽度*/
+    height: auto; /* Hauteur automatique 自动高度 */
 }
 
-/* Style pour les lieux */
+/* Style pour les lieux 地点文字样式*/
 .lieu {
-    color: grey; /* Couleur du texte */
+    color: grey; /* Couleur du texte 文字颜色*/
 }

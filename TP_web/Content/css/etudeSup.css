@@ -1,0 +1,156 @@
+/* Définition des polices de caractères 字体定义 */
+@font-face {
+  font-family: "Merienda"; /* 字体名称 */
+  src: url('../fonts/MeriendaOne-Regular.ttf'); /* 字体文件路径 */
+}
+@font-face {
+  font-family: "dancing_in_the_rainbow"; /* 字体名称 */
+  src: url('../fonts/dancing_in_the_rainbow.ttf'); /* 字体文件路径 */
+}
+
+/* Réinitialisation des boîtes 盒模型重置 */
+* {
+  box-sizing: border-box; /* 使用边框盒模型 */
+}
+
+/* Styles généraux pour le corps de la page 页面主体通用样式 */
+body {
+  width: 90%; /* 页面宽度 */
+  background-color: #686887; /* 背景颜色 */
+  margin: auto; /* 自动居中 */
+  overflow-y: scroll; /* 垂直滚动条 */
+  position: relative; /* 相对定位 */
+}
+
+/* Styles pour l'en-tête 页眉样式 */
+header {
+  width: 75%; /* 宽度 */
+  padding: 30px; /* 内边距 */
+  text-align: center; /* 文字居中 */
+  color: #D2B5FF; /* 文字颜色 */
+  margin: auto; /* 自动居中 */
+}
+
+/* Styles pour le contenu principal 主要内容样式 */
+main {
+  background-color: #C9C9D9; /* 背景颜色 */
+  border-radius: 10px; /* 边框圆角 */
+  padding: 30px; /* 内边距 */
+  position: relative; /* 相对定位 */
+}
+
+/* Styles pour le titre dans l'en-tête 页眉标题样式 */
+header h1 {
+  padding: 0px; /* 内边距 */
+  height: 120px; /* 高度 */
+  width: 90%; /* 宽度 */
+  margin: auto; /* 自动居中 */
+  background-image: url('../img/mon_master.png'); /* 背景图片路径 */
+  background-size: 120px; /* 背景图片尺寸 */
+  background-repeat: no-repeat; /* 背景图片不重复 */
+  background-position: center right; /* 背景图片位置 */
+  min-height: 120px; /* 最小高度 */
+  margin: auto; /* 自动居中 */
+}
+header h1 a {
+  display: block; /* 块级元素 */
+  margin: 0px; /* 外边距 */
+  font-family: Merienda; /* 字体 */
+  height: 100%; /* 高度 */
+  text-decoration: none; /* 文本装饰 */
+  color: inherit; /* 继承颜色 */
+}
+
+/* Styles pour le menu de navigation 导航菜单样式 */
+nav ul {
+  margin: 0; /* 外边距 */
+  padding: 0; /* 内边距 */
+}
+nav li {
+  list-style-type: none; /* 列表样式 */
+  padding: 0px; /* 内边距 */
+  margin-bottom: 10px; /* 底部外边距 */
+}
+nav li a {
+  display: block; /* 块级元素 */
+  margin: 0; /* 外边距 */
+  background-color: #C9C9D9; /* 背景颜色 */
+  border-radius: 10px; /* 边框圆角 */
+  padding-top: 20px; /* 上边距 */
+  padding-bottom: 20px; /* 下边距 */
+  padding-left: 10px; /* 左边距 */
+  padding-right: 10px; /* 右边距 */
+  width: 100%; /* 宽度 */
+  vertical-align: middle; /* 垂直对齐 */
+  text-align: center; /* 文字居中 */
+  text-decoration: none; /* 文本装饰 */
+  color: #686887; /* 文字颜色 */
+  font-style: italic; /* 字体样式 */
+}
+
+/* Styles pour les titres 标题样式 */
+h1 {
+  font-family: "dancing_in_the_rainbow"; /* 字体 */
+  font-size: 3.5em; /* 字体大小 */
+  text-align: center; /* 文字居中 */
+  margin-top: 0px; /* 上边距 */
+}
+.synopsis, .biographie {
+  width: 80%; /* 宽度 */
+  text-align: justify; /* 文字两端对齐 */
+}
+
+/* Styles pour les étiquettes 标签样式 */
+label {
+  display: block; /* 块级元素 */
+  width: 150px; /* 宽度 */
+}
+
+/* Styles pour les tableaux 表格样式 */
+table {
+  border-collapse: collapse; /* 合并边框 */
+  margin: auto; /* 自动居中 */
+}
+td, th {
+  border: 1px solid black; /* 边框样式 */
+  width: 300px; /* 宽度 */
+  height: 30px; /* 高度 */
+  text-align: center; /* 文字居中 */
+}
+.sansBordure {
+  border: 0px; /* 无边框 */
+  width: 30px; /* 宽度 */
+  padding-left: 0px; /* 左边距 */
+}
+
+/* Styles pour les icônes 图标样式 */
+img.icone {
+  width: 16px; /* 宽度 */
+}
+
+/* Liste des pages de résultats 结果页面列表 */
+.listePages {
+  width: 400px; /* 宽度 */
+  margin: auto; /* 自动居中 */
+  padding-top: 20px; /* 上边距 */
+  text-align: center; /* 文字居中 */
+}
+.listePages p {
+  color: blue; /* 文字颜色 */
+  padding: 0px; /* 内边距 */
+  margin: 0px; /* 外边距 */
+}
+a.lienStart {
+  text-decoration: none; /* 文本装饰 */
+  display: inline-block; /* 内联块元素 */
+  width: 25px; /* 宽度 */
+  font-size: smaller; /* 字体大小 */
+  color: blue; /* 文字颜色 */
+}
+a.active {
+  color: red; /* 文字颜色 */
+}
+
+/* Styles pour la mise en page en grille 栅格布局样式 */
+body {
+  display: grid; /* 网格
