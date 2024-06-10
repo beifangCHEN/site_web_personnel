@@ -6,6 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Site de Beifang CHEN</title>
     <link rel="stylesheet" href="css/styles.css">
+    <script>
+        // Fonction pour basculer la visibilité d'un élément par son identifiant
+        function toggleVisibility(id) {
+            var element = document.getElementById(id);
+            var arrow = document.getElementById(id + '-arrow');
+            if (element.style.display === "none") {
+                element.style.display = "block";
+                arrow.innerHTML = "&#9650;"; // flèche vers le haut
+            } else {
+                element.style.display = "none";
+                arrow.innerHTML = "&#9660;"; // flèche vers le bas
+            }
+        }
+    </script>
 </head>
 <body>
     <!-- En-tête de la page -->
@@ -16,10 +30,10 @@
             <div class="header-text">
                 <h1>Beifang CHEN</h1>
                 <p>Étudiante en BUT2 Technologie de l'Information</p>
-                <h3>1. <u>Recherche de Stage</u></h3>
-                <p>À la recherche d'un stage (en Informatique ou Science des Données)<br>à partir de <strong><u>juin 2024</u></strong> (8-12 semaines)</p>
-                <h3>2. <u>Recherche d'Alternance</u></h3>
-                <p>Cherche une alternance pour la 3e année en Science des Données<br>à partir de <strong><u>septembre 2024</u></strong>, rythme 3 jours de formation / 2 jours en entreprise,<br>en partenariat avec le CFA Supalia</p>
+                <h2>• Recherche de Stage</h2>
+                <p>À la recherche d'un stage (en Informatique ou Science des Données)<br>à partir de juin 2024 (8-12 semaines)</p>
+                <h2>• Recherche d'Alternance</h2>
+                <p>Cherche une alternance pour la 3e année en Science des Données<br>à partir de septembre 2024, rythme 3 jours de formation / 2 jours en entreprise,<br>en partenariat avec le CFA Supalia</p>
             </div>
         </div>
     </header>
@@ -28,12 +42,9 @@
     <div class="container">
         <!-- Barre latérale -->
         <aside class="sidebar">
-
             <!-- Section des informations personnelles -->
             <section class="contact-info">
-                <h2 onclick="toggleVisibility('contact', 'contact-arrow', 'contact-click-count')">
-                    Informations personnelles <span id="contact-arrow" class="arrow">&#9660;</span><span id="contact-click-count">0</span>
-                </h2>
+                <h2 onclick="toggleVisibility('contact')">Informations personnelles <span id="contact-arrow" class="arrow">&#9660;</span></h2>
                 <div id="contact" style="display:none;">
                     <ul>
                         <li>• <strong>LinkedIn: </strong><a href="https://linkedin.com/in/beifang-chen" target="_blank">linkedin.com/in/beifang-chen</a></li>
@@ -47,9 +58,7 @@
 
             <!-- Section des compétences et connaissances -->
             <section class="skills">
-                <h2 onclick="toggleVisibility('skills', 'skills-arrow', 'skills-click-count')">
-                    Compétences et Connaissances <span id="skills-arrow" class="arrow">&#9660;</span><span id="skills-click-count">0</span>
-                </h2>
+                <h2 onclick="toggleVisibility('skills')">Compétences et Connaissances <span id="skills-arrow" class="arrow">&#9660;</span></h2>
                 <div id="skills" style="display:none;">
                     <ul>
                         <li>• Systèmes d'information décisionnels, Management des systèmes d'information, Tests logiciels, Architecture des réseaux, Cryptographie et sécurité</li>
@@ -78,9 +87,7 @@
 
             <!-- Section des langues -->
             <section class="languages">
-                <h2 onclick="toggleVisibility('languages', 'languages-arrow', 'languages-click-count')">
-                    Langues <span id="languages-arrow" class="arrow">&#9660;</span><span id="languages-click-count">0</span>
-                </h2>
+                <h2 onclick="toggleVisibility('languages')">Langues <span id="languages-arrow" class="arrow">&#9660;</span></h2>
                 <div id="languages" style="display:none;">
                     <ul>
                         <li>• Chinois (bilingue)</li>
@@ -92,9 +99,7 @@
 
             <!-- Section des centres d'intérêt -->
             <section class="interests">
-                <h2 onclick="toggleVisibility('interests', 'interests-arrow', 'interests-click-count')">
-                    Centres d'intérêt <span id="interests-arrow" class="arrow">&#9660;</span><span id="interests-click-count">0</span>
-                </h2>
+                <h2 onclick="toggleVisibility('interests')">Centres d'intérêt <span id="interests-arrow" class="arrow">&#9660;</span></h2>
                 <div id="interests" style="display:none;">
                     <ul>
                         <li>• <strong>Voyages: </strong>Chine, France, Portugal, Allemagne, Pays-Bas, Belgique, République tchèque, Slovaquie, Hongrie, Autriche, Luxembourg</li>
@@ -104,18 +109,15 @@
             </section>
             <!-- Lien vers le site personnel -->
             <a href="https://chenbeifang.weebly.com" target="_blank"><img src="image/home/savoir.png" alt="CBF" class="image5"></a>
-            <a href="TP_web/home.php"><img src="TP_web/Content/img/mon_master.png" alt="site master" class="image5">Un exemple de TP noté</a>
         </aside>
 
         <!-- Contenu principal -->
         <main class="main-content">
             <!-- Section de formation -->
             <article class="education">
-                <h2 onclick="toggleVisibility('education', 'education-arrow', 'education-click-count')">
-                    Formation <span id="education-arrow" class="arrow">&#9660;</span><span id="education-click-count">0</span>
-                </h2>
+                <h2 onclick="toggleVisibility('education')">Formation <span id="education-arrow" class="arrow">&#9660;</span></h2>
                 <div id="education" style="display:none;">
-                   <ul>
+                    <ul>
                         <li>
                             <strong><a href="https://iutv.univ-paris13.fr/but-passerelle-technologie-information/" target="_blank">• BUT2 TI (Technologie de l'Information)</a></strong>, 
                             <span class="lieu">de oct. 2023 à juil. 2024<br>Université Sorbonne Paris Nord, Villetaneuse</span>
@@ -129,7 +131,7 @@
                             <br>Obtention du DEUG Mathématiques et Application en juillet 2022
                         </li>
                         <li>
-                            <strong><a href="https://math-info.u-paris.fr/licence-dinformatique/" target="_blank">• Licence Informatique</a></strong>, 
+                            <strong><a href="https://math-info.u-paris.fr.licence-dinformatique/" target="_blank">• Licence Informatique</a></strong>, 
                             <span class="lieu">de déc. 2014 à juil. 2019<br>Université Paris Descartes, Paris</span>
                             <a href="https://u-paris.fr" target="_blank"><img src="image/formation/UPD.jpg" alt="UPD" class="image1"></a>
                             <br>Obtention du DEUG informatique en juillet 2019
@@ -144,12 +146,9 @@
                     </ul>
                 </div>
             </article>
-
-            <!-- Section de projet -->
+            <!-- Projets Universitaires -->
             <article class="projects">
-                <h2 onclick="toggleVisibility('projects', 'projects-arrow', 'projects-click-count')">
-                    Projets <span id="projects-arrow" class="arrow">&#9660;</span><span id="projects-click-count">0</span>
-                </h2>
+                <h2 onclick="toggleVisibility('projects')">Projets universitaires <span id="projects-arrow" class="arrow">&#9660;</span></h2>
                 <div id="projects" style="display:none;">
                     <ul>
                         <!-- SAE -->
@@ -163,7 +162,16 @@
                         </li>
                         <!-- Séminaire -->
                         <li><strong>Séminaire</strong> (Projet d'algèbre), <span class="lieu">de septembre 2022 à novembre 2022<br>Université Sorbonne Paris Nord</span>
-                            <a h/home/student/905/11925670/public_html/beifang_site/ong>Agenda en ligne</strong> (Projet de programmation), <span class="lieu">de janvier 2019 à mai 2019<br>Université Paris Descartes</span>
+                            <a href="https://www.univ-spn.fr" target="_blank"><img src="image/formation/USPN.jpg" alt="USPN" class="image3"></a>
+                            <br><strong>Étude de la structure et classification des algèbres de Lie simples</strong>
+                            <br>• Exposé de 75 minutes en binôme
+                            <br>• Développement des notions de base
+                            <br>• Résolution des exercices et présentation des solutions
+                            <br><strong>Acquis :</strong> compétences en présentation, en résolution de problème
+                            <br><img src="image/projets/Seminaire.jpg" alt="Seminaire" class="projet-image">
+                        </li>
+                        <!-- Agenda en ligne -->
+                        <li><strong>Agenda en ligne</strong> (Projet de programmation), <span class="lieu">de janvier 2019 à mai 2019<br>Université Paris Descartes</span>
                             <a href="https://u-paris.fr" target="_blank"><img src="image/formation/UPD.jpg" alt="UPD" class="image1"></a>
                             <br><strong>Développement d'une application similaire à Google Agenda</strong>
                             <br>• Travail en groupe de 4 personnes
@@ -175,13 +183,10 @@
                     </ul>
                 </div>
             </article>
-
-            <!-- Section de stage -->
-            <article class="internships">
-                <h2 onclick="toggleVisibility('internships', 'internships-arrow', 'internships-click-count')">
-                    Stages <span id="internships-arrow" class="arrow">&#9660;</span><span id="internships-click-count">0</span>
-                </h2>
-                <div id="internships" style="display:none;">
+            <!-- Stage -->
+            <article class="internship">
+                <h2 onclick="toggleVisibility('internship')">Stage <span id="internship-arrow" class="arrow">&#9660;</span></h2>
+                <div id="internship" style="display:none;">
                     <ul>
                         <!-- Assistante d'éducation en mathématiques -->
                         <li><strong>Assistante d'éducation en mathématiques</strong>, <span class="lieu">de mars 2023 à juin 2023<br>Lycée Polyvalent de Cachan, Cachan </span><a href="https://www.lyceedecachan.fr" target="_blank"><img src="image/pro/LDC.jpg" alt="LDC" class="image2"></a>
@@ -193,12 +198,9 @@
                     </ul>
                 </div>
             </article>
-
-            <!-- Section d'expérience -->
+            <!-- Expérience professionnelle -->
             <article class="experience">
-                <h2 onclick="toggleVisibility('experience', 'experience-arrow', 'experience-click-count')">
-                    Expérience <span id="experience-arrow" class="arrow">&#9660;</span><span id="experience-click-count">0</span>
-                </h2>
+                <h2 onclick="toggleVisibility('experience')">Expérience professionnelle <span id="experience-arrow" class="arrow">&#9660;</span></h2>
                 <div id="experience" style="display:none;">
                     <ul>
                         <!-- Serveuse (weekend) -->
@@ -213,14 +215,9 @@
                 </div>
             </article>
         </main>
-        <button onclick="resetCounters()">Réinitialiser</button>
     </div>
-
-    <!-- Pied de page -->
     <footer>
         <p>&copy; 2024 Beifang CHEN. Tous droits réservés.</p>
     </footer>
-        <!-- JavaScript -->
-    <script src="js/script.js"></script>
 </body>
 </html>
